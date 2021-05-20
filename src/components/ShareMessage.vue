@@ -8,6 +8,39 @@
   </div>
 </template>
 
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      share: "",
+    };
+  },
+  methods: {
+    send() {
+      if (this.share === "") {
+        alert("シェアする内容を入力");
+      } else {
+        axios 
+          .post("https://secret-wildwood-13208.herokuapp.com/api/shares", {
+            user_id: this.$store.state.user.id,
+            share: this.share,
+          })
+          .then((response) => {
+            console.log(response);
+            alert("シェアしました");
+            this.share = "";
+            this.$router.go({
+              path: this.$router.currentRoute.path,
+              force: true,
+            });
+          });
+      }
+    },
+  },
+};
+</script>
+
 <style scoped>
 .share {
   margin: 15px;
