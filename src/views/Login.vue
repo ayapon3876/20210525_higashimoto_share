@@ -19,7 +19,7 @@ export default {
     return {
       email: "",
       password: ""
-    };   
+    };
   },
   components: {
     HeaderAuth
@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 button {
   width: 100px;
   text-align: center;
@@ -47,7 +47,7 @@ button {
 }
 .card {
   margin: 100px auto;
-  width:  350px;
+  width: 350px;
   background: #fff;
   border-radius: 5px;
   padding: 20px;
