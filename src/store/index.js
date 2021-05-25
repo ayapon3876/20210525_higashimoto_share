@@ -29,14 +29,14 @@ export default new Vuex.Store({
   actions: {
     async login({ commit }, { email, password }) {
       const responseLogin = await axios.post(
-        "https://secret-wildwood-13208.herokuapp.com/api/login",
+        "https://kikikiki3876.herokuapp.com/api/login",
         {
           email: email,
           password: password,
         }
       );
       const responseUser = await axios.get(
-        "https://secret-wildwood-13208.herokuapp.com/api/user",
+        "https://kikikiki3876.herokuapp.com/api/user",
         {
           params: {
             email: email,
@@ -49,7 +49,7 @@ export default new Vuex.Store({
     },
     logout({ commit }) {
       axios
-        .post("https://secret-wildwood-13208.herokuapp.com/api/logout", {
+        .post("https://kikikiki3876.herokuapp.com/api/logout", {
           auth: this.state.auth,
         })
         .then((response) => {

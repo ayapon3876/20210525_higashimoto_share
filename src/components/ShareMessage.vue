@@ -22,7 +22,7 @@ export default {
         alert("シェアする内容を入力");
       } else {
         axios 
-          .post("https://secret-wildwood-13208.herokuapp.com/api/shares", {
+          .post("https://kikikiki3876.herokuapp.com/api/shares", {
             user_id: this.$store.state.user.id,
             share: this.share,
           })
