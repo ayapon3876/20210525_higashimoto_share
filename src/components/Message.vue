@@ -18,7 +18,7 @@
             src="../assets/detail.png"
             @click="
               $router.push({
-                path: '/datail/' + value.item.id,
+                path: '/detail/' + value.item.id,
                 params: { id: value.item.id },
               })
             "
